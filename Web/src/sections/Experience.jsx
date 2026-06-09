@@ -6,7 +6,7 @@ import GradientText from '../components/ui/GradientText'
 
 export default function Experience() {
   return (
-    <SectionWrapper id="experience" className="bg-surface/30 rounded-none">
+    <SectionWrapper id="experience">
       <motion.h2 variants={fadeUp} className="section-title">
         Work <GradientText>Experience</GradientText>
       </motion.h2>

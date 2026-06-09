@@ -16,6 +16,7 @@ export default function App() {
       <BackgroundProvider>
         <div className="min-h-screen text-body">
           <AnimatedBackground />
+          <div className="pointer-events-none fixed inset-0 bg-bg/60" style={{ zIndex: -9 }} />
           <Navbar />
           <main>
             <Hero />

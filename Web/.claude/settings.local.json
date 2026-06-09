@@ -12,7 +12,8 @@
       "Bash(tasklist)",
       "PowerShell(Get-Process node -ErrorAction SilentlyContinue)",
       "PowerShell(Stop-Process -Force)",
-      "PowerShell(Set-Location \"c:\\\\Users\\\\shins\\\\iCloudDrive\\\\Desktop\\\\Portfolio\\\\Web\"; $job = Start-Job { Set-Location \"c:\\\\Users\\\\shins\\\\iCloudDrive\\\\Desktop\\\\Portfolio\\\\Web\"; npm run dev 2>&1 }; Start-Sleep -Seconds 6; $out = Receive-Job $job; $out)"
+      "PowerShell(Set-Location \"c:\\\\Users\\\\shins\\\\iCloudDrive\\\\Desktop\\\\Portfolio\\\\Web\"; $job = Start-Job { Set-Location \"c:\\\\Users\\\\shins\\\\iCloudDrive\\\\Desktop\\\\Portfolio\\\\Web\"; npm run dev 2>&1 }; Start-Sleep -Seconds 6; $out = Receive-Job $job; $out)",
+      "Bash(dir \"c:\\\\Users\\\\shins\\\\iCloudDrive\\\\Desktop\\\\Portfolio\\\\Web\\\\src\" /b)"
     ]
   }
 }

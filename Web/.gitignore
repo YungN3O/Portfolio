@@ -5,12 +5,23 @@ node_modules
 dist
 dist-ssr
 
+# Environment variables — never commit secrets
+.env
+.env.*
+.env.local
+.env.*.local
+
 # Local env / editor / OS files
 *.local
 .DS_Store
+Thumbs.db
+desktop.ini
 .vscode/*
 !.vscode/extensions.json
 .idea
+
+# iCloud Drive sync conflict duplicates  (e.g. "Skills 2.jsx")
+* 2.*
 
 # Vercel
 .vercel
@@ -20,3 +31,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+*.log

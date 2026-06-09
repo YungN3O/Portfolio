@@ -1,20 +1,24 @@
-# Personal Portfolio — iOS Developer
+# Vasileios Gkoumas — iOS Developer Portfolio
 
-A bold, dark-themed, fully responsive portfolio website built with **React + Vite + Tailwind CSS** and animated with **Framer Motion**. It's a static site — no backend, no APIs, no external data.
+A dark-themed, fully responsive personal portfolio built with **React + Vite + Tailwind CSS** and animated with **Framer Motion**. Fully static — no backend, no APIs, no environment variables required.
 
-## ✨ Features
+## Features
 
-- **Hero / Landing** — name, title, tagline, CTAs ("View My Work", "Download iOS App") + Apple App Store badge
-- **About** — bio, education, and a photo placeholder
-- **Experience** — previous roles as cards
-- **Projects** — iOS app showcase cards (name, description, tech stack, GitHub + App Store links)
-- **Skills** — animated, grouped skill bars (Swift, SwiftUI, React, …)
-- **Contact** — email + GitHub
-- Sticky navbar with smooth-scroll links, scrollspy active state, and a mobile hamburger menu
-- Smooth scroll-in animations throughout
-- Amber/orange accent on a near-black dark theme — defined once and easy to re-theme
+- **Hero** — name, title, tagline, and CTAs (View Work / App Store badge)
+- **About** — bio, education, and profile photo
+- **Experience** — role history as cards
+- **Projects** — iOS app showcase with tech stack, GitHub and App Store links
+- **Skills** — animated progress bars, grouped by category
+- **Contact** — email and social links
+- Sticky navbar with smooth-scroll, scrollspy active state, and mobile hamburger menu
+- **3 color themes** switchable at runtime — Amber, Indigo, App Store Blue — via CSS custom properties
+- **4 animated canvas backgrounds** switchable from the navbar:
+  - **Mesh** — 6 drifting color anchor points blending like an iOS wallpaper
+  - **Aurora** — 5 sine-wave ribbons flowing like the northern lights
+  - **Bokeh** — 80 depth-of-field orbs drifting upward, large+blurry near, tiny+sharp far
+  - **Code Rain** — falling Swift keywords with glowing heads and themed color trails
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - [React 18](https://react.dev/)
 - [Vite 5](https://vitejs.dev/)
@@ -22,85 +26,81 @@ A bold, dark-themed, fully responsive portfolio website built with **React + Vit
 - [Framer Motion](https://www.framer.com/motion/)
 - [react-icons](https://react-icons.github.io/react-icons/)
 
-## 🚀 Run locally
+## Run locally
 
-**Prerequisites:** [Node.js](https://nodejs.org/) 18+ and npm.
+**Prerequisites:** Node.js 18+ (tested on 22.x) and npm.
 
 ```bash
-# 1. Install dependencies
 npm install
-
-# 2. Start the dev server (hot reload)
-npm run dev
-# → open the printed URL (usually http://localhost:5173)
-
-# 3. Production build
-npm run build
-
-# 4. Preview the production build locally
-npm run preview
+npm run dev        # dev server at http://localhost:5173
+npm run build      # production build → dist/
+npm run preview    # preview the production build locally
 ```
 
-## ✍️ Adding your content
+## Personalise the content
 
-**All personal content lives in one file:** [`src/data/content.js`](src/data/content.js).
+**Everything lives in one file:** [`src/data/content.js`](src/data/content.js)
 
-Open it and replace every value marked with a `// TODO` comment:
+| Export | What to edit |
+|--------|-------------|
+| `profile` | Name, title, tagline, email, GitHub, LinkedIn, App Store URL, resume link |
+| `about` | Bio paragraphs, education history, photo path |
+| `experience[]` | Role, company, period, bullet points |
+| `projects[]` | Name, description, tech stack, GitHub + App Store URLs |
+| `skills[]` | Categories, skill names, proficiency levels (0–100) |
 
-- `profile` — your name, title, tagline, email, GitHub, **App Store URL**, resume link
-- `about` — bio paragraphs, education, and your **photo**
-- `experience[]` — your job history
-- `projects[]` — your apps (each has a **`githubUrl`** and **`appStoreUrl`** placeholder set to `"#"`)
-- `skills[]` — your skills and proficiency levels
+Other spots to update:
 
-Other `// TODO` markers to check:
+- **Profile photo** — drop an image in `/public` (e.g. `public/me.jpg`) and set `about.photo = '/me.jpg'`
+- **Favicon** — replace `/public/vite.svg` with your own icon and update the `<link>` in `index.html`
+- **Browser tab title / OG meta** — edit `index.html` directly
 
-- **Photo:** drop an image in `/public` (e.g. `public/me.jpg`) and set `about.photo = '/me.jpg'`. Until then a placeholder with your initials shows.
-- **Browser tab title & favicon:** [`index.html`](index.html).
-- **Links default to `#`** so unfinished placeholders are obvious — search the project for `TODO` to find them all.
+## Deploy to Vercel
 
-## 🎨 Changing the color palette
+This is a standard Vite SPA — Vercel auto-detects it and the included `vercel.json` handles SPA routing.
 
-The accent and surface colors are defined as CSS variables in [`src/index.css`](src/index.css) under `:root`, and mirrored in [`tailwind.config.js`](tailwind.config.js) so utility classes like `text-accent` / `bg-surface` stay in sync.
+**Dashboard (recommended):**
 
-To switch the accent, change `--accent` and `--accent-2` in `index.css`. (The gradient buttons/headings use Tailwind's `amber`/`orange` scale directly — update those classes too if you change hue significantly.)
+1. Push this repo to GitHub.
+2. [vercel.com](https://vercel.com) → **Add New → Project** → import the repo.
+3. Vercel detects Vite: build command `npm run build`, output `dist`.
+4. Click **Deploy**. No environment variables needed.
 
-## ▲ Deploy to Vercel
-
-This is a standard Vite app — Vercel auto-detects it.
-
-**Option A — Dashboard (recommended):**
-
-1. Push this project to a GitHub repository.
-2. Go to [vercel.com](https://vercel.com) → **Add New… → Project** → import the repo.
-3. Vercel auto-detects the framework as **Vite**:
-   - Build command: `npm run build`
-   - Output directory: `dist`
-4. Click **Deploy**. No environment variables are needed (fully static).
-
-**Option B — Vercel CLI:**
+**Vercel CLI:**
 
 ```bash
 npm i -g vercel
-vercel          # first run: follow the prompts to link/create the project
+vercel          # first run: follow prompts
 vercel --prod   # deploy to production
 ```
 
-## 📁 Project structure
+## Project structure
 
 ```
 src/
-├── main.jsx              # React entry
-├── App.jsx               # Composes navbar + sections + footer
-├── index.css            # Tailwind + CSS-variable palette + base styles
+├── main.jsx
+├── App.jsx                          # Providers + layout shell
+├── index.css                        # Tailwind + CSS-variable palette
 ├── data/
-│   └── content.js       # ← ALL your content lives here (TODOs)
+│   └── content.js                   # ← all personal content here
+├── context/
+│   ├── ThemeContext.jsx              # 3 color themes via CSS vars
+│   └── BackgroundContext.jsx        # active background state
 ├── components/
 │   ├── Navbar.jsx
 │   ├── Footer.jsx
-│   ├── SectionWrapper.jsx   # reusable scroll-animation wrapper
-│   ├── AppStoreBadge.jsx    # reusable App Store button
-│   └── ui/GradientText.jsx
+│   ├── AnimatedBackground.jsx       # switches between 4 canvases
+│   ├── BackgroundSwitcher.jsx       # 4 icon buttons in the navbar
+│   ├── ThemeSwitcher.jsx            # 3 color-dot buttons in the navbar
+│   ├── AppStoreBadge.jsx
+│   ├── SectionWrapper.jsx
+│   ├── backgrounds/
+│   │   ├── MeshBackground.jsx
+│   │   ├── AuroraBackground.jsx
+│   │   ├── BokehBackground.jsx
+│   │   └── CodeRainBackground.jsx
+│   └── ui/
+│       └── GradientText.jsx
 └── sections/
     ├── Hero.jsx
     ├── About.jsx
@@ -109,7 +109,3 @@ src/
     ├── Skills.jsx
     └── Contact.jsx
 ```
-
----
-
-Built with React · Tailwind · Framer Motion.
