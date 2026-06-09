@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm -v)",
+      "Read(//Users/n3o/**)",
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "PowerShell(Set-Location \"c:\\\\Users\\\\shins\\\\iCloudDrive\\\\Desktop\\\\Portfolio\\\\Web\"; $job = Start-Job { Set-Location \"c:\\\\Users\\\\shins\\\\iCloudDrive\\\\Desktop\\\\Portfolio\\\\Web\"; npm run dev 2>&1 }; Start-Sleep -Seconds 5; $out = Receive-Job $job; Stop-Job $job; Remove-Job $job; $out)",
+      "PowerShell(Rename-Item \"c:\\\\Users\\\\shins\\\\iCloudDrive\\\\Desktop\\\\Portfolio\\\\Web\\\\src\\\\sections\\\\Skills 2.jsx\" \"Skills.jsx\")",
+      "Bash(npx vite *)",
+      "Bash(tasklist)",
+      "PowerShell(Get-Process node -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force)",
+      "PowerShell(Set-Location \"c:\\\\Users\\\\shins\\\\iCloudDrive\\\\Desktop\\\\Portfolio\\\\Web\"; $job = Start-Job { Set-Location \"c:\\\\Users\\\\shins\\\\iCloudDrive\\\\Desktop\\\\Portfolio\\\\Web\"; npm run dev 2>&1 }; Start-Sleep -Seconds 6; $out = Receive-Job $job; $out)"
+    ]
+  }
+}
