@@ -7,9 +7,9 @@ import CodeRainBackground from './backgrounds/CodeRainBackground'
 export default function AnimatedBackground() {
   const { bg } = useBackground()
   switch (bg) {
+    case 'coderain': return <MeshBackground />
     case 'aurora':   return <AuroraBackground />
     case 'bokeh':    return <BokehBackground />
-    case 'coderain': return <CodeRainBackground />
-    default:         return <MeshBackground />
+    default:         return <CodeRainBackground />
   }
 }
