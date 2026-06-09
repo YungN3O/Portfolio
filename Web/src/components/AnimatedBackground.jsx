@@ -8,7 +8,7 @@ export default function AnimatedBackground() {
   const { bg } = useBackground()
   switch (bg) {
     case 'coderain': return <MeshBackground />
-    case 'aurora':   return <AuroraBackground />
+    //case 'aurora':   return <AuroraBackground />
     case 'bokeh':    return <BokehBackground />
     default:         return <CodeRainBackground />
   }
