@@ -34,13 +34,17 @@ export default function CodeRainBackground() {
 
     const [r,g,b] = hexToRgb(THEMES[theme].from)
 
-    function resize() {
+    function init() {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
       const count = Math.ceil(canvas.width / CW)
       cols = Array.from({ length: count }, (_, i) => makeCol(i * CW + 4, canvas.height))
     }
-    resize()
+    function resize() {
+      if (canvas.width === window.innerWidth) return  // iOS Safari address-bar height change — ignore
+      init()
+    }
+    init()
     window.addEventListener('resize', resize)
 
     let lastMutate = 0

@@ -28,7 +28,9 @@ export default function MeshBackground() {
     const [r2,g2,b2] = hexToRgb(THEMES[theme].to)
 
     function resize() {
-      canvas.width = window.innerWidth
+      const newW = window.innerWidth
+      if (canvas.width === newW) return
+      canvas.width = newW
       canvas.height = window.innerHeight
     }
     resize()
