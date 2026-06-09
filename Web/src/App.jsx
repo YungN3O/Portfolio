@@ -1,4 +1,5 @@
 import { ThemeProvider } from './context/ThemeContext'
+import { BackgroundProvider } from './context/BackgroundContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import AnimatedBackground from './components/AnimatedBackground'
@@ -12,19 +13,21 @@ import Contact from './sections/Contact'
 export default function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen text-body">
-        <AnimatedBackground />
-        <Navbar />
-        <main>
-          <Hero />
-          <About />
-          <Experience />
-          <Projects />
-          <Skills />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
+      <BackgroundProvider>
+        <div className="min-h-screen text-body">
+          <AnimatedBackground />
+          <Navbar />
+          <main>
+            <Hero />
+            <About />
+            <Experience />
+            <Projects />
+            <Skills />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </BackgroundProvider>
     </ThemeProvider>
   )
 }

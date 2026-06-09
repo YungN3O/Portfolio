@@ -4,6 +4,7 @@ import { HiMenu, HiX } from 'react-icons/hi'
 import { navLinks, profile } from '../data/content'
 import GradientText from './ui/GradientText'
 import ThemeSwitcher from './ThemeSwitcher'
+import BackgroundSwitcher from './BackgroundSwitcher'
 import { scrollToId } from '../utils/scrollTo'
 
 export default function Navbar() {
@@ -85,8 +86,10 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Theme switcher — desktop */}
-        <div className="hidden items-center md:flex">
+        {/* Background + Theme switchers — desktop */}
+        <div className="hidden items-center gap-2 md:flex">
+          <BackgroundSwitcher />
+          <div className="h-4 w-px bg-line" />
           <ThemeSwitcher />
         </div>
 
@@ -128,7 +131,9 @@ export default function Navbar() {
                   </a>
                 </li>
               ))}
-              <li className="px-4 py-3">
+              <li className="flex items-center gap-3 px-4 py-3">
+                <BackgroundSwitcher />
+                <div className="h-4 w-px bg-line" />
                 <ThemeSwitcher />
               </li>
             </ul>
