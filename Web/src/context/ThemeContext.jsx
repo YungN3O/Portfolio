@@ -33,7 +33,7 @@ export const THEMES = {
 const ThemeContext = createContext(null)
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState('amber')
+  const [theme, setTheme] = useState('blue')
 
   useEffect(() => {
     const root = document.documentElement
