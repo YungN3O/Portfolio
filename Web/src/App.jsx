@@ -22,12 +22,12 @@ class ErrorBoundary extends Component {
   render() {
     if (this.state.error) {
       return (
-        <div style={{ minHeight: '100vh', background: '#0a0a0b', color: '#f5f5f7', padding: '2rem', fontFamily: 'monospace' }}>
-          <h1 style={{ color: '#f59e0b', marginBottom: '1rem' }}>Something went wrong</h1>
-          <pre style={{ whiteSpace: 'pre-wrap', fontSize: '0.85rem', color: '#a1a1aa' }}>
-            {this.state.error.toString()}
+        <div style={{ minHeight: '100vh', background: '#c00', color: '#fff', padding: '2rem', fontFamily: 'monospace' }}>
+          <h1 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Render Error</h1>
+          <pre style={{ whiteSpace: 'pre-wrap', fontSize: '0.85rem', opacity: 0.9 }}>
+            {String(this.state.error)}
             {'\n\n'}
-            {this.state.error.stack}
+            {this.state.error?.stack ?? ''}
           </pre>
         </div>
       )
@@ -43,7 +43,6 @@ export default function App() {
         <BackgroundProvider>
           <div className="min-h-screen text-body">
             <AnimatedBackground />
-            <div className="pointer-events-none fixed inset-0 bg-bg/60" style={{ zIndex: -9 }} />
             <Navbar />
             <main>
               <Hero />

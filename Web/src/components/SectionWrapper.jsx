@@ -12,7 +12,7 @@ export const stagger = {
 }
 
 export const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
+  hidden: { y: 28 },
   show: {
     opacity: 1,
     y: 0,
@@ -27,7 +27,7 @@ export default function SectionWrapper({ id, className = '', children }) {
       variants={stagger}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0, fallbackInView: true }}
       className={`mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-28 ${className}`}
     >
       {children}
