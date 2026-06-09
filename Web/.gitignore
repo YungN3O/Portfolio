@@ -23,8 +23,8 @@ desktop.ini
 !.vscode/extensions.json
 .idea
 
-# iCloud Drive sync conflict duplicates  (e.g. "Skills 2.jsx")
-* 2.*
+# iCloud Drive sync conflict duplicates  (e.g. "Skills 2.jsx", "App 3.jsx")
+* [0-9].*
 
 # Vercel
 .vercel
