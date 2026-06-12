@@ -35,7 +35,8 @@ export const about = {
     'Hi, I am an iOS developer based in Athens.',
      'I build with Swift, SwiftUI, and SwiftData and when the app needs a backend, I reach for Vapor. Recent work spans AI-powered wardrobe management, on-device ML inference, and full-stack APIs. ',
      'Available for junior iOS roles in the EU and remote.',
-     'Currently working as a bartender in Athens as a side job, mostly to support my app projects, but also my Claude Max subscription!',
+     'Currently working as a bartender in Athens as a side job, mostly to support my app projects, but also my Claude Max subscription! Completed mandatory military service (Greece)',
+
   ],
   // TODO: replace with real education history
   education: [
