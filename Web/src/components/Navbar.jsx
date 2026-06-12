@@ -86,13 +86,13 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Background + Theme switchers — desktop */}
+        {/* Background + Theme switchers — desktop
         <div className="hidden items-center gap-2 md:flex">
           <BackgroundSwitcher />
           <div className="h-4 w-px bg-line" />
           <ThemeSwitcher />
         </div>
-
+                */}
         {/* Mobile hamburger */}
         <button
           type="button"
