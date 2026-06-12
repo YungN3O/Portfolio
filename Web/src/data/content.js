@@ -13,7 +13,7 @@ export const profile = {
   title: 'iOS Developer',
   // TODO: replace with real content
   tagline:
-    'I build delightful, performant iOS apps with Swift & SwiftUI — obsessed with clean design and smooth experiences.',
+    'I build delightful, performant iOS apps with Swift & SwiftUI. Obsessed with clean design and smooth experiences.',
   // TODO: replace with real content
   location: 'Athens, Greece',
   // TODO: replace with real email
@@ -32,9 +32,10 @@ export const profile = {
 export const about = {
   // TODO: replace with real content — your short bio (2–3 sentences)
   bio: [
-    'I build my own apps so I don’t have to pay for anyone else’s.',
-    'Hi! I’m an iOS developer passionate about crafting apps that feel native, fast, and beautiful. I care about the details — animations, accessibility, and architecture.',
-    'When I’m not shipping features, I’m exploring new Apple frameworks, contributing to side projects, and refining my design sense.',
+    'Hi, I am an iOS developer based in Athens.',
+     'I build with Swift, SwiftUI, and SwiftData and when the app needs a backend, I reach for Vapor. Recent work spans AI-powered wardrobe management, on-device ML inference, and full-stack APIs. ',
+     'Available for junior iOS roles in the EU and remote.',
+     'Currently working as a bartender in Athens as a side job, mostly to support my app projects, but also my Claude Max subscription!',
   ],
   // TODO: replace with real education history
   education: [
