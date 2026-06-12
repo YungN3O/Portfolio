@@ -60,9 +60,9 @@ export const experience = [
     period: 'May 2026 — Present',
     location: 'Athens, Greece',
     bullets: [
-      '',
-      '',
-      '',
+      'Customer-facing communication',
+      'Adaptability',
+      'Fast feedback loops under pressure',
     ],
   },
 
