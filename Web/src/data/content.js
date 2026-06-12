@@ -47,7 +47,7 @@ export const about = {
   ],
   // TODO: drop your photo in /public (e.g. /public/me.jpg) and set the path here.
   // Leave as '' to show the placeholder block.
-  photo: '/public/me.jpeg',
+  photo: '/me.jpeg',
 }
 
 // ---- Experience (cards) ----------------------------------------------------
